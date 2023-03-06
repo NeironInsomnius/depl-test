@@ -1,0 +1,15 @@
+---
+apiVersion: thingswise.com/v1
+kind: package
+spec:
+  categories:
+  - i18n:
+      en-us: '123'
+    name: category_0
+  functions: []
+  keys:
+  - i18n: {}
+    name: key_0
+  - i18n: {}
+    name: key_1
+  name: package_0

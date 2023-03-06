@@ -1,0 +1,75 @@
+---
+apiVersion: thingswise.com/v1
+kind: entity
+spec:
+  class: model_0
+  key: key_0
+  lookups:
+  - lookup_domain: Lookup
+    lookup_field: key_0
+    name: default
+  rollup: true
+  start_of_day: 0
+  superclass: []
+  tags: []
+  timezone: Asia/Shanghai
+---
+apiVersion: thingswise.com/v1
+kind: primaryDataDomain
+spec:
+  class: model_0
+  fields:
+  - category: []
+    name: Name
+    type: string
+  name: Basic
+---
+apiVersion: thingswise.com/v1
+kind: primaryDataDomain
+spec:
+  class: model_0
+  fields:
+  - category: []
+    index: true
+    name: key_0
+    type: string
+  kind: lookup
+  name: Lookup
+---
+apiVersion: thingswise.com/v1
+kind: primaryDataDomain
+spec:
+  class: model_0
+  fields: []
+  name: domain_2
+---
+apiVersion: thingswise.com/v1
+kind: operationalDataDomain
+spec:
+  class: model_0
+  fields:
+  - aggregated: false
+    category: []
+    default_stats: avg
+    kind: direct
+    name: domain_0.int1
+    original_name: int1
+    resolution:
+    - 5s
+    - 15s
+    - 1min
+    - 5min
+    - 15min
+    - 1h
+    - 12h
+    - 1d
+    timeseries: true
+    type: number
+  name: domain_0
+---
+apiVersion: thingswise.com/v1
+kind: controlDomain
+spec:
+  class: model_0
+  fields: []
+  name: domain_3

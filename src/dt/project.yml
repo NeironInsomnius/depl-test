@@ -1,0 +1,12 @@
+---
+apiVersion: thingswise.com/v1
+kind: project
+spec:
+  large_period_aggregation:
+    cron: 0 0 */12 * * *
+    month_period_start_day: 1
+    start_of_day: 0
+    timezone: Asia/Shanghai
+    year_period_start_month: 1
+  lookups_enabled: false
+  name: test_project
