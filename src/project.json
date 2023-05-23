@@ -36,63 +36,12 @@
   "resolutions_ttl": {},
   "start_of_day": 0,
   "dry_run_status": {
-    "message": "project.status.deploy.finished.dry.run",
-    "progress": 100.0,
-    "stages": [
-      {
-        "title": "project.status.edge.fetch",
-        "log": "[DEBUG] - 2023-03-06 13:22:45,422 - tw_model_designer - preparing mongo client\n[DEBUG] - 2023-03-06 13:22:45,423 - tw_model_designer - connecting to mongo...\n[DEBUG] - 2023-03-06 13:22:45,430 - tw_model_designer - connected to mongo successfully\n[DEBUG] - 2023-03-06 13:22:45,430 - tw_model_designer - connecting to mongo...\n[DEBUG] - 2023-03-06 13:22:45,436 - tw_model_designer - connected to mongo successfully\n[DEBUG] - 2023-03-06 13:22:45,436 - tw_model_designer - preparing project dao\n[DEBUG] - 2023-03-06 13:22:45,436 - tw_model_designer - reading project\n[DEBUG] - 2023-03-06 13:22:45,446 - tw_model_designer - reading project package\n[DEBUG] - 2023-03-06 13:22:45,447 - tw_model_designer - initiating deployment\n[INFO] - 2023-03-06 13:22:45,450 - tw_model_designer - Retrieving edge mgmt information\n[DEBUG] - 2023-03-06 13:22:45,450 - tw_model_designer - Retrieved edge mgmt info successfully\n",
-        "success": true
-      },
-      {
-        "title": "project.status.workdir.init",
-        "log": "",
-        "success": true
-      },
-      {
-        "title": "project.status.repo.setting.up",
-        "log": "[INFO] - 2023-03-06 13:22:45,454 - tw_model_designer - local repo with .git file already exists in directory home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project\n[INFO] - 2023-03-06 13:22:45,457 - tw_model_designer - Repository git@github.com:NeironInsomnius/depl-test.git successfully initialized in the directory home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project\n",
-        "success": true
-      },
-      {
-        "title": "project.status.repo.sync",
-        "log": "[INFO] - 2023-03-06 13:22:45,460 - tw_model_designer - Synchronizing repo\n[DEBUG] - 2023-03-06 13:22:45,462 - git.cmd - Popen(['git', 'fetch', '-v', 'origin'], cwd=/home/neiron/code/thingswise/model-designer/home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project, universal_newlines=True, shell=None, istream=None)\n[DEBUG] - 2023-03-06 13:22:46,824 - git.cmd - Popen(['git', 'branch', '-a'], cwd=/home/neiron/code/thingswise/model-designer/home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project, universal_newlines=False, shell=None, istream=None)\n[DEBUG] - 2023-03-06 13:22:46,831 - git.cmd - Popen(['git', 'branch', '-a'], cwd=/home/neiron/code/thingswise/model-designer/home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project, universal_newlines=False, shell=None, istream=None)\n[DEBUG] - 2023-03-06 13:22:46,836 - git.cmd - Popen(['git', 'branch', '-a'], cwd=/home/neiron/code/thingswise/model-designer/home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project, universal_newlines=False, shell=None, istream=None)\n[DEBUG] - 2023-03-06 13:22:46,841 - git.cmd - Popen(['git', 'clean', '-d', '-x', '-f'], cwd=/home/neiron/code/thingswise/model-designer/home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project, universal_newlines=False, shell=None, istream=None)\n[DEBUG] - 2023-03-06 13:22:46,846 - git.cmd - Popen(['git', 'checkout', '--', '.'], cwd=/home/neiron/code/thingswise/model-designer/home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project, universal_newlines=False, shell=None, istream=None)\n[DEBUG] - 2023-03-06 13:22:46,851 - git.cmd - Popen(['git', 'checkout', 'master'], cwd=/home/neiron/code/thingswise/model-designer/home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project, universal_newlines=False, shell=None, istream=None)\n[INFO] - 2023-03-06 13:22:46,857 - tw_model_designer - Running git pull\n[DEBUG] - 2023-03-06 13:22:46,858 - git.cmd - Popen(['git', 'pull', '-v', 'origin'], cwd=/home/neiron/code/thingswise/model-designer/home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project, universal_newlines=True, shell=None, istream=None)\n[INFO] - 2023-03-06 13:22:48,132 - tw_model_designer - Repo is synchronized, delete stale files (except src directory)\n[INFO] - 2023-03-06 13:22:48,132 - tw_model_designer - directory home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project/src does not exist, mkdir\n[INFO] - 2023-03-06 13:22:48,132 - tw_model_designer - Clean up source directory, excluding: ['tests/.*', 'data/.*', 'jets/.*', 'dt/project\\\\.yml', 'dt/dt\\\\.yml', 'dt/.*/dt\\\\.yml', 'dt/[^/]+/dm/_legacy/.*', 'web/web\\\\.json', 'web/field\\\\-specs\\\\.json', 'web/geoData/struct\\\\.json']\n[INFO] - 2023-03-06 13:22:48,134 - tw_model_designer - .gitignore file is not present, writing default\n[INFO] - 2023-03-06 13:22:48,134 - tw_model_designer - directory home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project/src/model does not exist, mkdir\n",
-        "success": true
-      },
-      {
-        "title": "project.status.repo.success",
-        "log": "[INFO] - 2023-03-06 13:22:48,137 - tw_model_designer - Writing json configs\n[ERROR] - 2023-03-06 13:22:48,145 - tw_model_designer - 'model_0.domain_0': wrong reference to parent column - '6405b6b2ea349e601c9e1be6' will be skipped\n[INFO] - 2023-03-06 13:22:48,156 - tw_model_designer - write package: package_0 json config\n[INFO] - 2023-03-06 13:22:48,161 - tw_model_designer - Writing project json dump\n[WARNING] - 2023-03-06 13:22:48,171 - tw_model_designer - Default key/secret value is used in project security settings\n[INFO] - 2023-03-06 13:22:48,171 - tw_model_designer - directory home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project/src/jets does not exist, mkdir\n[INFO] - 2023-03-06 13:22:48,172 - tw_model_designer - Writing src/jets/sec-config.json\n",
-        "success": true
-      },
-      {
-        "title": "project.status.deploy.yoi",
-        "log": "[INFO] - 2023-03-06 13:22:48,176 - tw_model_designer - Running Digital Twin Abstract Model Converter\n[INFO] - 2023-03-06 13:22:48,177 - yoi_abstract_model - parsing home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project/src/model/package_0.json\n[INFO] - 2023-03-06 13:22:48,188 - yoi_abstract_model - parsed home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project/src/model/package_0.json\n\n",
-        "success": true
-      },
-      {
-        "title": "project.status.deploy.generation",
-        "log": "[INFO] - 2023-03-06 13:22:48,189 - tw_model_designer - Abstract model conversion finished, generating model code\n[INFO] - 2023-03-06 13:22:48,193 - tw_model_designer - directory home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project/src/dt/package_0/dm does not exist, mkdir\n",
-        "success": true
-      },
-      {
-        "title": "project.status.deploy.3D",
-        "log": "[INFO] - 2023-03-06 13:22:48,197 - tw_model_designer - Model code generation finished, preparing 3D models\n[INFO] - 2023-03-06 13:22:48,197 - tw_model_designer - dumping 3D model files\n",
-        "success": true
-      },
-      {
-        "title": "project.status.deploy.configuration",
-        "log": "[INFO] - 2023-03-06 13:22:48,202 - tw_model_designer - Prepared 3D models, creating project configuration\n[INFO] - 2023-03-06 13:22:48,202 - tw_model_designer - Write to home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project/src/dt/project.yml\n",
-        "success": true
-      },
-      {
-        "title": "project.status.deploy.dtc",
-        "log": "[INFO] - 2023-03-06 13:22:48,204 - tw_model_designer - Project configuration finished, running Digital Twin Compiler\n[INFO] - 2023-03-06 13:22:48,214 - tw_digital_twin_sdk - loading project properties from home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project/src/dt/project.yml\n[INFO] - 2023-03-06 13:22:48,393 - tw_digital_twin_sdk - copying all files from home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project/src/dt/package_0/dm to home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project/dm/package_0\n[INFO] - 2023-03-06 13:22:48,398 - tw_digital_twin_sdk - generated home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project/cfg/config.json\n[INFO] - 2023-03-06 13:22:48,399 - tw_digital_twin_sdk - generated home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project/dm/models.yaml\n[INFO] - 2023-03-06 13:22:48,432 - tw_digital_twin_sdk - copying home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project/src/dt/init_data.json to home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project/dt/init_data.json\n[INFO] - 2023-03-06 13:22:48,432 - tw_digital_twin_sdk - copying /home/neiron/code/thingswise/digital-twin-ng/tw_digital_twin_sdk/resources/init_roles.json to home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project/dt/init_roles.json\n[INFO] - 2023-03-06 13:22:48,441 - digital_machine.runtime.digital_machine_runtime - Loading package: package_0 [test_scope.test_project.dm.package_0]\n[INFO] - 2023-03-06 13:22:48,447 - digital_machine.runtime.digital_machine_runtime - Adding model package_0___model_1 [<class 'type'>] from package test_scope/test_project/package_0\n[INFO] - 2023-03-06 13:22:48,447 - digital_machine.runtime.digital_machine_runtime_impl - Associating {package_0}model_1 to package_0___model_1\n[INFO] - 2023-03-06 13:22:48,447 - digital_machine.runtime.digital_machine_runtime - Adding model package_0___model_0 [<class 'type'>] from package test_scope/test_project/package_0\n[INFO] - 2023-03-06 13:22:48,447 - digital_machine.runtime.digital_machine_runtime_impl - Associating {package_0}model_0 to package_0___model_0\n[DEBUG] - 2023-03-06 13:22:48,447 - digital_machine.runtime.digital_machine_runtime - traverse: test_scope_test_project, {package_0}model_0, [], {'{package_0}model_1': <class 'digital_machine.templates.simple.SimpleClassTemplate.default_pymodel.<locals>.SimpleClass'>, '{package_0}model_0': <class 'digital_machine.templates.simple.SimpleClassTemplate.default_pymodel.<locals>.SimpleClass'>}\n[DEBUG] - 2023-03-06 13:22:48,449 - digital_machine.runtime.digital_machine_runtime - traverse: test_scope_test_project, {package_0}model_1, [], {'{package_0}model_1': <class 'digital_machine.templates.simple.SimpleClassTemplate.default_pymodel.<locals>.SimpleClass'>, '{package_0}model_0': <class 'digital_machine.templates.simple.SimpleClassTemplate.default_pymodel.<locals>.SimpleClass'>}\n[DEBUG] - 2023-03-06 13:22:48,449 - digital_machine.runtime.digital_machine_runtime - package_0___model_1.outputs = ()\n[DEBUG] - 2023-03-06 13:22:48,449 - digital_machine.runtime.digital_machine_runtime - package_0___model_1.exports = ()\n[DEBUG] - 2023-03-06 13:22:48,449 - digital_machine.runtime.digital_machine_runtime - package_0___model_0.outputs = ()\n[DEBUG] - 2023-03-06 13:22:48,449 - digital_machine.runtime.digital_machine_runtime - package_0___model_0.exports = (Export('domain_0.int1',TimeAggregate(Input(stream(domain_0_input),'domain_0.int1',None,None,None),'5s'),'5s',False), Export('domain_0.int1',TimeAggregate(Placeholder('domain_0.int1','5s'),'15s'),'15s',False), Export('domain_0.int1',TimeAggregate(Placeholder('domain_0.int1','15s'),'1min'),'1min',False), Export('domain_0.int1',TimeAggregate(Placeholder('domain_0.int1','1min'),'5min'),'5min',False), Export('domain_0.int1',TimeAggregate(Placeholder('domain_0.int1','5min'),'15min'),'15min',False), Export('domain_0.int1',TimeAggregate(Placeholder('domain_0.int1','15min'),'1h'),'1h',False), Export('domain_0.int1',TimeAggregate(Placeholder('domain_0.int1','1h'),'12h'),'12h',False), Export('domain_0.int1',TimeAggregate(Placeholder('domain_0.int1','12h'),'1d'),'1d',False))\n[INFO] - 2023-03-06 13:22:48,452 - tw_digital_twin_sdk - generated home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project/cfg/input.json\n[INFO] - 2023-03-06 13:22:48,452 - tw_digital_twin_sdk - copying all files from home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project/src/jets to home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project/jets\n[INFO] - 2023-03-06 13:22:48,453 - tw_digital_twin_sdk - copying home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project/src/cfg/edge-upload-mapping.json to home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project/cfg/edge-upload-mapping.json\n[INFO] - 2023-03-06 13:22:48,471 - tw_digital_twin_sdk - generated home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project/dt/dt.yml\n[INFO] - 2023-03-06 13:22:48,471 - tw_digital_twin_sdk - empty output.json is omitted\n[INFO] - 2023-03-06 13:22:48,471 - tw_digital_twin_sdk - copying all files from home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project/src/web to home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project/web\n[INFO] - 2023-03-06 13:22:48,472 - tw_digital_twin_sdk - loading home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project/src/web/geoData/struct.json\n[INFO] - 2023-03-06 13:22:48,472 - tw_digital_twin_sdk - generate objectHierarchies from geo struct and model tree\n[INFO] - 2023-03-06 13:22:48,477 - tw_digital_twin_sdk - web.json: pageTitle is not set\n[INFO] - 2023-03-06 13:22:48,477 - tw_digital_twin_sdk - web.json: faviconPath is not set\n[INFO] - 2023-03-06 13:22:48,478 - tw_digital_twin_sdk - copying /home/neiron/code/thingswise/digital-twin-ng/tw_digital_twin_sdk/resources/favicon.png to home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project/web/resource/images\n[INFO] - 2023-03-06 13:22:48,478 - tw_digital_twin_sdk - web.json: brandImagePath is not set\n[INFO] - 2023-03-06 13:22:48,478 - tw_digital_twin_sdk - copying /home/neiron/code/thingswise/digital-twin-ng/tw_digital_twin_sdk/resources/logo.png to home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project/web/resource/images\n[INFO] - 2023-03-06 13:22:48,478 - tw_digital_twin_sdk - web.json: languages is not set\n[INFO] - 2023-03-06 13:22:48,478 - tw_digital_twin_sdk - web.json: defaultLanguage is not set\n[INFO] - 2023-03-06 13:22:48,478 - tw_digital_twin_sdk - web.json: metadataDomain is not set\n[INFO] - 2023-03-06 13:22:48,478 - tw_digital_twin_sdk - metadataDeviceField: metadataDeviceField is not set\n[INFO] - 2023-03-06 13:22:48,478 - tw_digital_twin_sdk - web.json: objectHierarchy is not set\n[INFO] - 2023-03-06 13:22:48,479 - tw_digital_twin_sdk - generated home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project/web/web.json\n[INFO] - 2023-03-06 13:22:48,479 - tw_digital_twin_sdk - generated home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project/web/design.json\n[INFO] - 2023-03-06 13:22:48,479 - tw_digital_twin_sdk - generated home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project/web/objects.json\n[INFO] - 2023-03-06 13:22:48,487 - tw_digital_twin_sdk - generated home/neiron/code/thingswise/model-designer/tw_model_designer/build/test_scope/test_project/web/metric-specs.json\n",
-        "success": true
-      }
-    ],
-    "state": "success",
-    "worker_timestamp": "2023-03-06T09:12:44.135164+00:00",
-    "build_time": "2023-03-06T10:22:48.487587+00:00"
+    "message": "deploy process finished with exit code -9",
+    "progress": 0,
+    "stages": [],
+    "state": "canceled",
+    "worker_timestamp": "2023-05-23T08:32:41.826574+00:00",
+    "build_time": "2023-03-06T11:01:21.060585+00:00"
   },
   "long_period_aggregation": {
     "cron": "0 0 */12 * * *",
@@ -100,7 +49,7 @@
     "year_period_start_month": 1
   },
   "packages": {
-    "6405bf8ed954b0c8e786d4dc": {
+    "646c9470ec624072d56eb61d": {
       "name": "package_0",
       "package_id": "63d2dfc7c85fbfa7415fe2d2",
       "project": "test_project",
@@ -108,7 +57,7 @@
       "domains": [
         {
           "_id": {
-            "$oid": "6405bf8ed954b0c8e786d4e1"
+            "$oid": "646c9470ec624072d56eb622"
           },
           "columns": [
             {
@@ -151,14 +100,14 @@
           ],
           "kind": "operational",
           "name": "domain_0",
-          "package_id": "6405bf8ed954b0c8e786d4dc",
+          "package_id": "646c9470ec624072d56eb61d",
           "project": "test_project",
           "scope": "test_scope",
           "groups": []
         },
         {
           "_id": {
-            "$oid": "6405bf8ed954b0c8e786d4e3"
+            "$oid": "646c9470ec624072d56eb624"
           },
           "columns": [
             {
@@ -194,14 +143,14 @@
           ],
           "kind": "event",
           "name": "domain_1",
-          "package_id": "6405bf8ed954b0c8e786d4dc",
+          "package_id": "646c9470ec624072d56eb61d",
           "project": "test_project",
           "scope": "test_scope",
           "groups": []
         },
         {
           "_id": {
-            "$oid": "6405bf8ed954b0c8e786d4e4"
+            "$oid": "646c9470ec624072d56eb625"
           },
           "columns": [
             {
@@ -231,14 +180,14 @@
           ],
           "kind": "primary",
           "name": "domain_2",
-          "package_id": "6405bf8ed954b0c8e786d4dc",
+          "package_id": "646c9470ec624072d56eb61d",
           "project": "test_project",
           "scope": "test_scope",
           "groups": []
         },
         {
           "_id": {
-            "$oid": "6405bf8ed954b0c8e786d4e5"
+            "$oid": "646c9470ec624072d56eb626"
           },
           "columns": [
             {
@@ -260,14 +209,14 @@
           ],
           "kind": "control",
           "name": "domain_3",
-          "package_id": "6405bf8ed954b0c8e786d4dc",
+          "package_id": "646c9470ec624072d56eb61d",
           "project": "test_project",
           "scope": "test_scope",
           "groups": []
         }
       ],
       "models": {
-        "6405bf8ed954b0c8e786d4dd": {
+        "646c9470ec624072d56eb61e": {
           "attributes": {
             "abstract": false,
             "axis": {},
@@ -285,9 +234,9 @@
             "y": -84
           },
           "is_collapsed": false,
-          "package_id": "6405bf8ed954b0c8e786d4dc",
+          "package_id": "646c9470ec624072d56eb61d",
           "package_obj_id": {
-            "$oid": "6405bf8ed954b0c8e786d4dc"
+            "$oid": "646c9470ec624072d56eb61d"
           },
           "project": "test_project",
           "relations": {
@@ -296,11 +245,11 @@
           },
           "scope": "test_scope",
           "template_id": "1",
-          "id": "6405bf8ed954b0c8e786d4dd",
+          "id": "646c9470ec624072d56eb61e",
           "domains": [
             {
               "_id": {
-                "$oid": "6405bf8ed954b0c8e786d4e2"
+                "$oid": "646c9470ec624072d56eb623"
               },
               "columns": [
                 {
@@ -308,38 +257,38 @@
                 }
               ],
               "kind": "operational",
-              "model_id": "6405bf8ed954b0c8e786d4dd",
+              "model_id": "646c9470ec624072d56eb61e",
               "name": "domain_0",
-              "package_id": "6405bf8ed954b0c8e786d4dc",
-              "parent_id": "6405bf8ed954b0c8e786d4e1",
+              "package_id": "646c9470ec624072d56eb61d",
+              "parent_id": "646c9470ec624072d56eb622",
               "project": "test_project",
               "scope": "test_scope",
               "groups": []
             },
             {
               "_id": {
-                "$oid": "6405bf8ed954b0c8e786d4e6"
+                "$oid": "646c9470ec624072d56eb627"
               },
               "columns": [],
               "kind": "control",
-              "model_id": "6405bf8ed954b0c8e786d4dd",
+              "model_id": "646c9470ec624072d56eb61e",
               "name": "domain_3",
-              "package_id": "6405bf8ed954b0c8e786d4dc",
-              "parent_id": "6405bf8ed954b0c8e786d4e5",
+              "package_id": "646c9470ec624072d56eb61d",
+              "parent_id": "646c9470ec624072d56eb626",
               "project": "test_project",
               "scope": "test_scope",
               "groups": []
             },
             {
               "_id": {
-                "$oid": "6405bf8ed954b0c8e786d4e7"
+                "$oid": "646c9470ec624072d56eb628"
               },
               "columns": [],
               "kind": "primary",
-              "model_id": "6405bf8ed954b0c8e786d4dd",
+              "model_id": "646c9470ec624072d56eb61e",
               "name": "domain_2",
-              "package_id": "6405bf8ed954b0c8e786d4dc",
-              "parent_id": "6405bf8ed954b0c8e786d4e4",
+              "package_id": "646c9470ec624072d56eb61d",
+              "parent_id": "646c9470ec624072d56eb625",
               "project": "test_project",
               "scope": "test_scope",
               "groups": []
@@ -349,7 +298,7 @@
           "instances": [
             {
               "_id": {
-                "$oid": "6405bf8ed954b0c8e786d4df"
+                "$oid": "646c9470ec624072d56eb620"
               },
               "coordinates": {
                 "x": 30,
@@ -357,15 +306,15 @@
               },
               "is_collapsed": false,
               "key": "instance_0",
-              "model_id": "6405bf8ed954b0c8e786d4dd",
-              "package_id": "6405bf8ed954b0c8e786d4dc",
+              "model_id": "646c9470ec624072d56eb61e",
+              "package_id": "646c9470ec624072d56eb61d",
               "project": "test_project",
               "relations": {}
             }
           ],
           "models_3d": []
         },
-        "6405bf8ed954b0c8e786d4de": {
+        "646c9470ec624072d56eb61f": {
           "attributes": {
             "abstract": false,
             "axis": {},
@@ -383,24 +332,24 @@
             "y": 112
           },
           "is_collapsed": false,
-          "package_id": "6405bf8ed954b0c8e786d4dc",
+          "package_id": "646c9470ec624072d56eb61d",
           "package_obj_id": {
-            "$oid": "6405bf8ed954b0c8e786d4dc"
+            "$oid": "646c9470ec624072d56eb61d"
           },
           "project": "test_project",
           "relations": {
-            "in_scope_of": "6405bf8ed954b0c8e786d4dd",
+            "in_scope_of": "646c9470ec624072d56eb61e",
             "in_sub_class_of": []
           },
           "scope": "test_scope",
           "template_id": "1",
-          "id": "6405bf8ed954b0c8e786d4de",
+          "id": "646c9470ec624072d56eb61f",
           "domains": [],
           "timezone": "Asia/Shanghai",
           "instances": [
             {
               "_id": {
-                "$oid": "6405bf8ed954b0c8e786d4e0"
+                "$oid": "646c9470ec624072d56eb621"
               },
               "coordinates": {
                 "x": -158,
@@ -408,8 +357,8 @@
               },
               "is_collapsed": false,
               "key": "instance_1",
-              "model_id": "6405bf8ed954b0c8e786d4de",
-              "package_id": "6405bf8ed954b0c8e786d4dc",
+              "model_id": "646c9470ec624072d56eb61f",
+              "package_id": "646c9470ec624072d56eb61d",
               "project": "test_project",
               "scope": "instance_0",
               "shift_slot_id": null,
@@ -429,7 +378,7 @@
       "categories": [
         {
           "_id": {
-            "$oid": "6405bf8ed954b0c8e786d4d9"
+            "$oid": "646c9470ec624072d56eb61a"
           },
           "category": "category_0",
           "label": {
@@ -437,7 +386,7 @@
               "en-us": "123"
             }
           },
-          "package_id": "6405bf8ed954b0c8e786d4dc",
+          "package_id": "646c9470ec624072d56eb61d",
           "project": "test_project",
           "scope": "test_scope"
         }
@@ -445,19 +394,19 @@
       "keys": [
         {
           "_id": {
-            "$oid": "6405bf8ed954b0c8e786d4da"
+            "$oid": "646c9470ec624072d56eb61b"
           },
           "key": "key_0",
-          "package_id": "6405bf8ed954b0c8e786d4dc",
+          "package_id": "646c9470ec624072d56eb61d",
           "project": "test_project",
           "scope": "test_scope"
         },
         {
           "_id": {
-            "$oid": "6405bf8ed954b0c8e786d4db"
+            "$oid": "646c9470ec624072d56eb61c"
           },
           "key": "key_1",
-          "package_id": "6405bf8ed954b0c8e786d4dc",
+          "package_id": "646c9470ec624072d56eb61d",
           "project": "test_project",
           "scope": "test_scope"
         }
@@ -465,7 +414,7 @@
       "shift_schedules": [
         {
           "_id": {
-            "$oid": "6405bf8ed954b0c8e786d4f0"
+            "$oid": "646c9470ec624072d56eb631"
           },
           "label": {
             "i18n": {
@@ -473,14 +422,14 @@
               "zh-CN": "Schedule_0"
             }
           },
-          "package_id": "6405bf8ed954b0c8e786d4dc",
+          "package_id": "646c9470ec624072d56eb61d",
           "project": "test_project",
           "scope": "test_scope",
           "start": "2023-03-02T16:00:00",
           "shift_slots": [
             {
               "_id": {
-                "$oid": "6405bf8ed954b0c8e786d4f1"
+                "$oid": "646c9470ec624072d56eb632"
               },
               "duration": 9,
               "label": {
@@ -490,14 +439,14 @@
                 }
               },
               "offset": 0,
-              "package_id": "6405bf8ed954b0c8e786d4dc",
+              "package_id": "646c9470ec624072d56eb61d",
               "project": "test_project",
               "scope": "test_scope"
             }
           ]
         }
       ],
-      "id": "6405bf8ed954b0c8e786d4dc"
+      "id": "646c9470ec624072d56eb61d"
     }
   }
 }
